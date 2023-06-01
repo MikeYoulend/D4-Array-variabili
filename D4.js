@@ -55,6 +55,14 @@ console.log(utenteCheEffettuaLAcquisto, Valore);
 
 let Clienti = [amy, paul, marco]
 
+for (let i = 0; i < Clienti.length; i++) {
+ Cliente = Clienti[i]
+ Cliente.isAmbassador ? console.log(Cliente.name, Cliente.lastName, " è un ambassador ") 
+ : console.log(Cliente.name, Cliente.lastName, "Non è un ambassador ") 
+
+  
+}
+
 
 amy.isAmbassador === true ? console.log(amy.name, amy.lastName + " è un ambassador ")
   : console.log(amy.name, amy.lastName + " Non è un ambassador")
@@ -68,4 +76,12 @@ marco.isAmbassador === true ? console.log(marco.name, marco.lastName + " è un a
   : console.log(marco.name, marco.lastName + " Non è un ambassador")
 
  
-  let Ambassador =[marco]
+  
+  let Ambassador = []
+
+  for (let i = 0; i < Clienti.length; i++) {
+    Cliente = Clienti[i]; 
+    Cliente.isAmbassador ? Ambassador.push(Cliente.name, Cliente.lastName) : ""
+     
+    } console.log(Ambassador);
+ 
